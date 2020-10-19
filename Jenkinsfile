@@ -46,7 +46,7 @@ pipeline {
             steps{
                 sh 'rm -rf reactapp'
                 sh 'mkdir reactapp'
-                sh 'ls'
+                sh 'pwd'
                 sh 'cp -R build /var/jenkins_home/workspace/react_test_app_master/reactapp'
                 sh 'cp package.json /var/jenkins_home/workspace/react_test_app_master/reactapp'
                 
