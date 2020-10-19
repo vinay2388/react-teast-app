@@ -46,8 +46,9 @@ pipeline {
             steps{
                 sh 'rm -rf reactapp'
                 sh 'mkdir reactapp'
-                sh 'cp -R build /var/jenkins_home/workspace/react_app_build_clone_main/reactapp'
-                sh 'cp package.json /var/jenkins_home/workspace/react_app_build_clone_main/reactapp'
+                sh 'ls'
+                sh 'cp -R build /var/jenkins_home/workspace/react_test_app_master/reactapp'
+                sh 'cp package.json /var/jenkins_home/workspace/react_test_app_master/reactapp'
                 
             }
         }
@@ -55,7 +56,7 @@ pipeline {
             steps {
                 rtNpmPublish (
                     tool: "nodejs", // Tool name from Jenkins configuration
-                    path: "/var/jenkins_home/workspace/react_app_build_clone_main/reactapp",
+                    path: "/var/jenkins_home/workspace/react_test_app_master/reactapp",
                     deployerId: "NPM_DEPLOYER"
                 )
             }
