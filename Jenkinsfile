@@ -49,7 +49,6 @@ pipeline {
                 sh 'pwd'
                 sh 'cp -R build /var/jenkins_home/workspace/ct_test_app_jenkins_build_master/reactapp'
                 sh 'cp package.json /var/jenkins_home/workspace/ct_test_app_jenkins_build_master/reactapp'
-                
             }
         }
         stage ('Exec npm publish') {
